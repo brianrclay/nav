@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sandbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./css/reset.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css" />
+    <link href="./css/helpers.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="topbar flex ai-center jc-between">
+        <div class="flex ai-center">
+            <a href="#" class="logo">
+                <img src="./nav-icons/Logo.svg">
+            </a>
+            <button class="account-switcher flex ai-center m-l-8 p-l-8 p-r-8 p-t-8 p-b-8">
+                <span class="m-r-8">
+                    Acme Co.
+                </span>
+                <img src="./nav-icons/Chevron-Down.svg">
+            </button>
+        </div>
+        <button class="search flex ai-center p-l-16 p-r-16 p-t-8 p-b-8">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M16.3333 17.5L11.0833 12.25C10.6667 12.5833 10.1875 12.8472 9.64583 13.0417C9.10417 13.2361 8.52778 13.3333 7.91667 13.3333C6.40278 13.3333 5.12167 12.8092 4.07333 11.7608C3.02444 10.7119 2.5 9.43056 2.5 7.91667C2.5 6.40278 3.02444 5.12139 4.07333 4.0725C5.12167 3.02417 6.40278 2.5 7.91667 2.5C9.43056 2.5 10.7119 3.02417 11.7608 4.0725C12.8092 5.12139 13.3333 6.40278 13.3333 7.91667C13.3333 8.52778 13.2361 9.10417 13.0417 9.64583C12.8472 10.1875 12.5833 10.6667 12.25 11.0833L17.5 16.3333L16.3333 17.5ZM7.91667 11.6667C8.95833 11.6667 9.84389 11.3022 10.5733 10.5733C11.3022 9.84389 11.6667 8.95833 11.6667 7.91667C11.6667 6.875 11.3022 5.98944 10.5733 5.26C9.84389 4.53111 8.95833 4.16667 7.91667 4.16667C6.875 4.16667 5.98944 4.53111 5.26 5.26C4.53111 5.98944 4.16667 6.875 4.16667 7.91667C4.16667 8.95833 4.53111 9.84389 5.26 10.5733C5.98944 11.3022 6.875 11.6667 7.91667 11.6667Z"
+                    fill="#69767C" />
+            </svg>
+            <span class="m-l-8">Search</span>
+        </button>
+        <div class="flex ai-center right">
+            <button class="help p-8">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_119_37931" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                        height="24">
+                        <rect width="24" height="24" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_119_37931)">
+                        <path
+                            d="M11.95 18C12.3 18 12.596 17.879 12.838 17.637C13.0793 17.3957 13.2 17.1 13.2 16.75C13.2 16.4 13.0793 16.1043 12.838 15.863C12.596 15.621 12.3 15.5 11.95 15.5C11.6 15.5 11.304 15.621 11.062 15.863C10.8207 16.1043 10.7 16.4 10.7 16.75C10.7 17.1 10.8207 17.3957 11.062 17.637C11.304 17.879 11.6 18 11.95 18ZM11.05 14.15H12.9C12.9 13.6 12.9627 13.1667 13.088 12.85C13.2127 12.5333 13.5667 12.1 14.15 11.55C14.5833 11.1167 14.925 10.704 15.175 10.312C15.425 9.92067 15.55 9.45 15.55 8.9C15.55 7.96667 15.2083 7.25 14.525 6.75C13.8417 6.25 13.0333 6 12.1 6C11.15 6 10.3793 6.25 9.788 6.75C9.196 7.25 8.78333 7.85 8.55 8.55L10.2 9.2C10.2833 8.9 10.471 8.575 10.763 8.225C11.0543 7.875 11.5 7.7 12.1 7.7C12.6333 7.7 13.0333 7.84567 13.3 8.137C13.5667 8.429 13.7 8.75 13.7 9.1C13.7 9.43333 13.6 9.74567 13.4 10.037C13.2 10.329 12.95 10.6 12.65 10.85C11.9167 11.5 11.4667 11.9917 11.3 12.325C11.1333 12.6583 11.05 13.2667 11.05 14.15ZM12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88333 20.6873 5.825 19.975 4.925 19.075C4.025 18.175 3.31267 17.1167 2.788 15.9C2.26267 14.6833 2 13.3833 2 12C2 10.6167 2.26267 9.31667 2.788 8.1C3.31267 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.31233 8.1 2.787C9.31667 2.26233 10.6167 2 12 2C13.3833 2 14.6833 2.26233 15.9 2.787C17.1167 3.31233 18.175 4.025 19.075 4.925C19.975 5.825 20.6873 6.88333 21.212 8.1C21.7373 9.31667 22 10.6167 22 12C22 13.3833 21.7373 14.6833 21.212 15.9C20.6873 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6873 15.9 21.212C14.6833 21.7373 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z"
+                            fill="#3A4245" />
+                    </g>
+                </svg>
+            </button>
+            <button class="notifications p-8 m-l-8">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_119_37934" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                        height="24">
+                        <rect width="24" height="24" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_119_37934)">
+                        <path
+                            d="M4 19V17H6V10C6 8.61667 6.41667 7.38733 7.25 6.312C8.08333 5.23733 9.16667 4.53333 10.5 4.2V3.5C10.5 3.08333 10.646 2.72933 10.938 2.438C11.2293 2.146 11.5833 2 12 2C12.4167 2 12.7707 2.146 13.062 2.438C13.354 2.72933 13.5 3.08333 13.5 3.5V4.2C14.8333 4.53333 15.9167 5.23733 16.75 6.312C17.5833 7.38733 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9793 21.8043 10.588 21.413C10.196 21.021 10 20.55 10 20H14C14 20.55 13.8043 21.021 13.413 21.413C13.021 21.8043 12.55 22 12 22ZM8 17H16V10C16 8.9 15.6083 7.95833 14.825 7.175C14.0417 6.39167 13.1 6 12 6C10.9 6 9.95833 6.39167 9.175 7.175C8.39167 7.95833 8 8.9 8 10V17Z"
+                            fill="#3A4245" />
+                    </g>
+                </svg>
+            </button>
+            <button class="profile-dropdown flex ai-center m-l-16 p-0">
+                <div class="avatar flex ai-center jc-center m-r-4">B</div>
+                <img src="./nav-icons/Chevron-Down.svg">
+            </button>
+        </div>
+    </nav>
+    <div class="page-content">
+        <div class="nav-wrapper">
+            <nav class="left-nav top-menu">
+                <div class="menu p-t-12">
+                    <a href="#" class="nav-item active">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_119_38008" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="20" height="20">
+                                <rect width="20" height="20" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_119_38008)">
+                                <path
+                                    d="M3.33301 17.5V7.521L10 2.5L16.667 7.521V17.5H11.25V11.854H8.72901V17.5H3.33301ZM5.08301 15.75H6.97901V10.104H13V15.75H14.917V8.396L10 4.688L5.08301 8.396V15.75Z"
+                                    fill="#3A4245" />
+                            </g>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                    <a href="#" class="nav-item delivery-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_119_38009" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="20" height="20">
+                                <rect width="20" height="20" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_119_38009)">
+                                <path
+                                    d="M2.5 18.3346V12.5013H5V9.16797H9.16667V7.5013H6.66667V1.66797H13.3333V7.5013H10.8333V9.16797H15V12.5013H17.5V18.3346H10.8333V12.5013H13.3333V10.8346H6.66667V12.5013H9.16667V18.3346H2.5ZM8.33333 5.83464H11.6667V3.33464H8.33333V5.83464ZM4.16667 16.668H7.5V14.168H4.16667V16.668ZM12.5 16.668H15.8333V14.168H12.5V16.668Z"
+                                    fill="#3A4245" />
+                            </g>
+                        </svg>
+                        <span>Delivery</span>
+                    </a>
+                    <a href="#" class="nav-item compute-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_119_38010" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="20" height="20">
+                                <rect width="20" height="20" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_119_38010)">
+                                <path
+                                    d="M3.33317 17.5C2.87484 17.5 2.48262 17.3369 2.1565 17.0108C1.82984 16.6842 1.6665 16.2917 1.6665 15.8333V4.16667C1.6665 3.70833 1.82984 3.31583 2.1565 2.98917C2.48262 2.66306 2.87484 2.5 3.33317 2.5H14.9998C15.4582 2.5 15.8507 2.66306 16.1773 2.98917C16.5034 3.31583 16.6665 3.70833 16.6665 4.16667V5.83333H18.3332V7.5H16.6665V9.16667H18.3332V10.8333H16.6665V12.5H18.3332V14.1667H16.6665V15.8333C16.6665 16.2917 16.5034 16.6842 16.1773 17.0108C15.8507 17.3369 15.4582 17.5 14.9998 17.5H3.33317ZM3.33317 15.8333H14.9998V4.16667H3.33317V15.8333ZM4.99984 14.1667H9.1665V10.8333H4.99984V14.1667ZM9.99984 8.33333H13.3332V5.83333H9.99984V8.33333ZM4.99984 10H9.1665V5.83333H4.99984V10ZM9.99984 14.1667H13.3332V9.16667H9.99984V14.1667Z"
+                                    fill="#3A4245" />
+                            </g>
+                        </svg>
+                        <span>Compute</span>
+                    </a>
+                    <a href="#" class="nav-item security-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_119_38011" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="20" height="20">
+                                <rect width="20" height="20" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_119_38011)">
+                                <path
+                                    d="M10.0002 18.3346C8.06961 17.8485 6.476 16.7407 5.21933 15.0113C3.96211 13.2824 3.3335 11.3624 3.3335 9.2513V4.16797L10.0002 1.66797L16.6668 4.16797V9.2513C16.6668 11.3624 16.0385 13.2824 14.7818 15.0113C13.5246 16.7407 11.9307 17.8485 10.0002 18.3346ZM10.0002 16.5846C11.4446 16.1263 12.6391 15.2096 13.5835 13.8346C14.5279 12.4596 15.0002 10.9319 15.0002 9.2513V5.3138L10.0002 3.4388L5.00016 5.3138V9.2513C5.00016 10.9319 5.47238 12.4596 6.41683 13.8346C7.36127 15.2096 8.55572 16.1263 10.0002 16.5846Z"
+                                    fill="#3A4245" />
+                            </g>
+                        </svg>
+                        <span>Security</span>
+                    </a>
+                    <a href="#" class="nav-item stats-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_119_38012" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="20" height="20">
+                                <rect width="20" height="20" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_119_38012)">
+                                <path
+                                    d="M5.83333 14.1667H7.5V8.33333H5.83333V14.1667ZM9.16667 14.1667H10.8333V5.83333H9.16667V14.1667ZM12.5 14.1667H14.1667V10.8333H12.5V14.1667ZM4.16667 17.5C3.70833 17.5 3.31583 17.3369 2.98917 17.0108C2.66306 16.6842 2.5 16.2917 2.5 15.8333V4.16667C2.5 3.70833 2.66306 3.31583 2.98917 2.98917C3.31583 2.66306 3.70833 2.5 4.16667 2.5H15.8333C16.2917 2.5 16.6842 2.66306 17.0108 2.98917C17.3369 3.31583 17.5 3.70833 17.5 4.16667V15.8333C17.5 16.2917 17.3369 16.6842 17.0108 17.0108C16.6842 17.3369 16.2917 17.5 15.8333 17.5H4.16667ZM4.16667 15.8333H15.8333V4.16667H4.16667V15.8333Z"
+                                    fill="#3A4245" />
+                            </g>
+                        </svg>
+                        <span>Stats</span>
+                    </a>
+                    <a href="#" class="nav-item resources-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_119_38013" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="20" height="20">
+                                <rect width="20" height="20" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_119_38013)">
+                                <path
+                                    d="M3.41699 16.666C2.95833 16.666 2.55199 16.4887 2.19799 16.134C1.84399 15.78 1.66699 15.374 1.66699 14.916V5.08203C1.66699 4.62403 1.84399 4.21803 2.19799 3.86403C2.55199 3.50936 2.95833 3.33203 3.41699 3.33203H8.24999L9.91699 4.99903H16.667C17.125 4.99903 17.5173 5.17603 17.844 5.53003C18.17 5.88403 18.333 6.29036 18.333 6.74903H9.18799L7.52099 5.08203H3.41699V14.916L5.43799 8.49903H19.583L17.396 15.478C17.2847 15.8394 17.0867 16.1277 16.802 16.343C16.5173 16.5584 16.1943 16.666 15.833 16.666H3.41699ZM5.24999 14.916H15.75L17.25 10.166H6.74999L5.24999 14.916Z"
+                                    fill="#3A4245" />
+                            </g>
+                        </svg>
+                        <span>Resources</span>
+                    </a>
+                    <a href="#" class="nav-item marketplace-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_119_38014" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="20" height="20">
+                                <rect width="20" height="20" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_119_38014)">
+                                <path
+                                    d="M4 5.5V4H16V5.5H4ZM4 16.5V12H3V10.5L4 6.5H16L17 10.5V12H16V16.5H14.5V12H11V16.5H4ZM5.5 15H9.5V12H5.5V15ZM4.542 10.5H15.458L14.833 8H5.167L4.542 10.5Z"
+                                    fill="#3A4245" />
+                            </g>
+                        </svg>
+                        <span>Marketplace</span>
+                    </a>
+                </div>
+                <button class="collapse-nav flex ai-center p-t-16 p-b-16 p-l-24 p-r-24">
+                    <img src="./nav-icons/collapse-nav.svg">
+                    <span class="m-l-12">Collapse nav</span>
+                </button>
+            </nav>
+            <nav class="left-nav drill-down deliver-menu">
+                <div class="menu">
+                    <a href="#" class="nav-item back-to-home">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_39_32991" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                                <rect width="20" height="20" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_39_32991)">
+                                <path
+                                    d="M7.14086 16.6654L0 9.9987L7.14086 3.33203L8.41283 4.4987L3.41423 9.16536H14.2817V10.832H3.41423L8.41283 15.4987L7.14086 16.6654Z"
+                                    fill="#0073C6" />
+                            </g>
+                        </svg>
+                        <svg class="m-r-8 m-l-12" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_39_32989" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                                <rect width="20" height="20" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_39_32989)">
+                                <path
+                                    d="M2.5 18.3346V12.5013H5V9.16797H9.16667V7.5013H6.66667V1.66797H13.3333V7.5013H10.8333V9.16797H15V12.5013H17.5V18.3346H10.8333V12.5013H13.3333V10.8346H6.66667V12.5013H9.16667V18.3346H2.5Z"
+                                    fill="#3A4245" />
+                            </g>
+                        </svg>
+                        <span class="m-0">Delivery</span>
+                    </a>
+                    <a href="#" class="nav-item active">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_119_37945" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="20" height="20">
+                                <rect width="20" height="20" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_119_37945)">
+                                <path
+                                    d="M6.66667 7.5C6.90278 7.5 7.10083 7.42 7.26083 7.26C7.42028 7.10056 7.5 6.90278 7.5 6.66667C7.5 6.43056 7.42028 6.2325 7.26083 6.0725C7.10083 5.91306 6.90278 5.83333 6.66667 5.83333C6.43056 5.83333 6.2325 5.91306 6.0725 6.0725C5.91306 6.2325 5.83333 6.43056 5.83333 6.66667C5.83333 6.90278 5.91306 7.10056 6.0725 7.26C6.2325 7.42 6.43056 7.5 6.66667 7.5ZM6.66667 10.8333C6.90278 10.8333 7.10083 10.7533 7.26083 10.5933C7.42028 10.4339 7.5 10.2361 7.5 10C7.5 9.76389 7.42028 9.56583 7.26083 9.40583C7.10083 9.24639 6.90278 9.16667 6.66667 9.16667C6.43056 9.16667 6.2325 9.24639 6.0725 9.40583C5.91306 9.56583 5.83333 9.76389 5.83333 10C5.83333 10.2361 5.91306 10.4339 6.0725 10.5933C6.2325 10.7533 6.43056 10.8333 6.66667 10.8333ZM6.66667 14.1667C6.90278 14.1667 7.10083 14.0867 7.26083 13.9267C7.42028 13.7672 7.5 13.5694 7.5 13.3333C7.5 13.0972 7.42028 12.8992 7.26083 12.7392C7.10083 12.5797 6.90278 12.5 6.66667 12.5C6.43056 12.5 6.2325 12.5797 6.0725 12.7392C5.91306 12.8992 5.83333 13.0972 5.83333 13.3333C5.83333 13.5694 5.91306 13.7672 6.0725 13.9267C6.2325 14.0867 6.43056 14.1667 6.66667 14.1667ZM4.16667 17.5C3.70833 17.5 3.31583 17.3369 2.98917 17.0108C2.66306 16.6842 2.5 16.2917 2.5 15.8333V4.16667C2.5 3.70833 2.66306 3.31583 2.98917 2.98917C3.31583 2.66306 3.70833 2.5 4.16667 2.5H13.3333L17.5 6.66667V15.8333C17.5 16.2917 17.3369 16.6842 17.0108 17.0108C16.6842 17.3369 16.2917 17.5 15.8333 17.5H4.16667ZM4.16667 15.8333H15.8333V7.5H12.5V4.16667H4.16667V15.8333Z"
+                                    fill="#3A4245" />
+                            </g>
+                        </svg>
+                        <span>Service summary</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_119_37946" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="20" height="20">
+                                <rect width="20" height="20" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_119_37946)">
+                                <path
+                                    d="M5.83337 15C4.44449 15 3.26393 14.5139 2.29171 13.5417C1.31949 12.5694 0.833374 11.3889 0.833374 10C0.833374 8.61111 1.31949 7.43056 2.29171 6.45833C3.26393 5.48611 4.44449 5 5.83337 5H14.1667C15.5556 5 16.7362 5.48611 17.7084 6.45833C18.6806 7.43056 19.1667 8.61111 19.1667 10C19.1667 11.3889 18.6806 12.5694 17.7084 13.5417C16.7362 14.5139 15.5556 15 14.1667 15H5.83337ZM5.83337 13.3333H14.1667C15.0834 13.3333 15.8681 13.0069 16.5209 12.3542C17.1737 11.7014 17.5 10.9167 17.5 10C17.5 9.08333 17.1737 8.29861 16.5209 7.64583C15.8681 6.99306 15.0834 6.66667 14.1667 6.66667H5.83337C4.91671 6.66667 4.13199 6.99306 3.47921 7.64583C2.82643 8.29861 2.50004 9.08333 2.50004 10C2.50004 10.9167 2.82643 11.7014 3.47921 12.3542C4.13199 13.0069 4.91671 13.3333 5.83337 13.3333ZM5.83337 12.5C6.52782 12.5 7.1181 12.2569 7.60421 11.7708C8.09032 11.2847 8.33337 10.6944 8.33337 10C8.33337 9.30556 8.09032 8.71528 7.60421 8.22917C7.1181 7.74306 6.52782 7.5 5.83337 7.5C5.13893 7.5 4.54865 7.74306 4.06254 8.22917C3.57643 8.71528 3.33337 9.30556 3.33337 10C3.33337 10.6944 3.57643 11.2847 4.06254 11.7708C4.54865 12.2569 5.13893 12.5 5.83337 12.5Z"
+                                    fill="#3A4245" />
+                            </g>
+                        </svg>
+                        <span>Service config</span>
+                    </a>
+                </div>
+                <button class="collapse-nav flex ai-center p-t-16 p-b-16 p-l-24 p-r-24">
+                    <img src="./nav-icons/collapse-nav.svg">
+                    <span class="m-l-12">Collapse nav</span>
+                </button>
+            </nav>
+        </div>
+        <div class="page-wrapper">
+            <div class="page home-page">
+                <h1 class="m-t-32">Home</h1>
+            </div>
+            <div class="page delivery-page">
+                <div class="breadcrumbs flex ai-center">
+                    <div href="#" class="breadcrumb-item flex ai-center">
+                        <a href="#">Delivery</a>
+                        <button class="breadcrumb-dropdown flex ai-center jc-center">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 12.8112L5 7.8112L6.16667 6.64453L10 10.4779L13.8333 6.64453L15 7.8112L10 12.8112Z"
+                                    fill="#3A4245" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="separator">/</div>
+                    <div href="#" class="breadcrumb-item flex ai-center">
+                        <a href="#">Service summary</a>
+                        <button class="breadcrumb-dropdown flex ai-center jc-center">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 12.8112L5 7.8112L6.16667 6.64453L10 10.4779L13.8333 6.64453L15 7.8112L10 12.8112Z"
+                                    fill="#3A4245" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <h1 class="m-t-32">Service summary</h1>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
