@@ -1,6 +1,10 @@
 @import "./variables";
 // @import "./atoms";
 
+// html, body{
+//     overflow-x: hidden;
+// }
+
 // HEADERS
 h1, .h1{
     font-family: 'Inter', sans-serif;
@@ -89,6 +93,16 @@ h6, .h6{
 body {
     font-family: 'Inter', sans-serif;
     color: $gray-80;
+    
+    .tippy-box{
+        display: none;
+    }
+
+    &.nav-collapsed{
+        .tippy-box{
+            display: block;
+        }
+    }
 }
 
 a {
@@ -159,6 +173,9 @@ nav.topbar{
             transition: $transition;
             cursor: pointer;
             border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &:hover{
                 background-color: $gray-10;
@@ -191,17 +208,15 @@ nav.topbar{
 .page-content{
     display: flex;
 
-   
-
     .page-wrapper{
         flex: 1;
         box-sizing: border-box;
+        width: calc(100vw - 256px - 64px);
     }
     
     .page{
-        width: 100%;
         padding: 0 32px;
-        width: 100%;
+        width: calc(100vw - 256px - 64px);
 
         &.delivery-page{
             display: none;
@@ -225,6 +240,7 @@ nav.topbar{
     height: calc(100vh - 56px);
     border-right: 1px solid $gray-20;
     box-sizing: border-box;
+    transition: $transition;
 
     &.show-delivery{
         .top-menu{
@@ -233,6 +249,53 @@ nav.topbar{
         .deliver-menu{
             left: 0;
             pointer-events: auto;
+        }
+    }
+
+    &.collapsed{
+        width: 68px;
+
+        .left-nav{
+            width: 68px;
+
+            .nav-item{
+                padding: 12px;
+                margin: 8px 12px;
+                display: flex;
+                justify-content: center;
+
+                &.active{
+                    border: 1px solid $info-70;
+
+                    &::after{
+                        display: none;
+                    }
+                }
+
+                span{
+                    display: none;
+                }
+            }
+
+            .collapse-nav{
+                img{
+                    transform: rotate(180deg);
+                }
+                span{
+                    display: none;
+                }
+            }
+
+            .back-to-home{
+                height: 56px;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+
+                span, .page-icon{
+                    display: none;
+                }
+            }
         }
     }
 }
@@ -314,6 +377,11 @@ nav.topbar{
             line-height: 20px;
             margin-left: 12px;
         }
+
+        svg{
+            min-width: 20px;
+            min-height: 20px;
+        }
     }
 
     .collapse-nav{
@@ -323,6 +391,10 @@ nav.topbar{
 
         &:hover{
             background-color: $gray-10;
+        }
+
+        img{
+            transition: $transition;
         }
 
         span{
