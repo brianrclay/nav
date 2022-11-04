@@ -102,6 +102,20 @@ body {
         .tippy-box{
             display: block;
         }
+
+        .expand-border{
+            &:hover{
+                cursor: e-resize;
+            }
+        }
+
+        .page{
+            width: calc(100vw - 68px - 64px);
+        }
+        
+        .page-wrapper{
+            width: calc(100vw - 68px - 64px);
+        }
     }
 }
 
@@ -781,4 +795,21 @@ nav.topbar{
             }
         }
     }
+}
+
+.expand-border{
+    height: 100%;
+    width: 6px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 1;
+    transition: $transition;
+
+    &:hover{
+        background-color: $info-60;
+        cursor: w-resize;
+    }
+
 }

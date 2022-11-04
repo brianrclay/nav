@@ -10,7 +10,7 @@ $('#back-to-home, #back-to-home2').click(function(){
     $('.page-content').removeClass('show-delivery');
 })
 
-$('.collapse-nav').click(function(){
+$('.collapse-nav, .expand-border').click(function(){
     $('.nav-wrapper').toggleClass('collapsed');
     $('.nav-item').toggleClass('collapsed');
     $('body').toggleClass('nav-collapsed')
