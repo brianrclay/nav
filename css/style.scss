@@ -248,6 +248,13 @@ nav.topbar{
             font-size: 14px;
             line-height: 20px;
         }
+
+        .short-cut{
+            padding: 0 4px;
+            border-radius: 4px;
+            background-color: $gray-10;
+            border: 1px solid $gray-30;
+        }
     }
 
     .right{

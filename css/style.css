@@ -226,6 +226,12 @@ nav.topbar .search span {
   font-size: 14px;
   line-height: 20px;
 }
+nav.topbar .search .short-cut {
+  padding: 0 4px;
+  border-radius: 4px;
+  background-color: #F0F2F5;
+  border: 1px solid #CED0D2;
+}
 nav.topbar .right .help, nav.topbar .right .notifications {
   transition: all 300ms cubic-bezier(0.475, 0.425, 0, 0.995);
   cursor: pointer;
