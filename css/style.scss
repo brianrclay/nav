@@ -1,10 +1,6 @@
 @import "./variables";
 // @import "./atoms";
 
-// html, body{
-//     overflow-x: hidden;
-// }
-
 // HEADERS
 h1, .h1{
     font-family: 'Inter', sans-serif;
@@ -378,9 +374,16 @@ nav.topbar{
     .page{
         padding: 0 32px;
         width: calc(100vw - 256px - 64px);
-        max-width: 1400px;
 
         &.delivery-page{
+            display: none;
+        }
+        
+        &.security-page{
+            display: none;
+        }
+
+        &.ng-waf-page{
             display: none;
         }
     }
@@ -390,6 +393,33 @@ nav.topbar{
             display: none;
         }
         .delivery-page{
+            display: block;
+        }
+        .ng-waf-page{
+            display: none;
+        }
+    }
+    
+    &.show-security{
+        .home-page{
+            display: none;
+        }
+        .security-page{
+            display: block;
+        }
+        .ng-waf-page{
+            display: none;
+        }
+    }
+    
+    &.show-ng-waf{
+        .home-page{
+            display: none;
+        }
+        .security-page{
+            display: none;
+        }
+        .ng-waf-page{
             display: block;
         }
     }
@@ -413,7 +443,17 @@ nav.topbar{
             pointer-events: auto;
         }
     }
-
+    
+    &.show-security{
+        .top-menu{
+            left: -257px;
+        }
+        .security-menu{
+            left: 0;
+            pointer-events: auto;
+        }
+    }
+    
     &.collapsed{
         width: 68px;
 
@@ -434,9 +474,21 @@ nav.topbar{
                     }
                 }
 
-                span{
+                span, .chevron-down{
                     display: none;
                 }
+            }
+
+            .sub-nav{
+                position: absolute;
+                visibility: hidden;
+                pointer-events: none;
+                height: 0;
+                display: none;
+            }
+
+            .parent.open svg path{
+                fill: $info-70;
             }
 
             .collapse-nav{
@@ -472,6 +524,7 @@ nav.topbar{
     position: absolute;
     left: 0;
     top: 0;
+    overflow-y: overlay;
 
     &.drill-down{
         left: 256px;
@@ -828,4 +881,90 @@ nav.topbar{
         cursor: w-resize;
     }
 
+}
+
+.parent{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+
+.chevron-down{
+    transition: $transition;
+}
+
+.parent.open{
+
+    .nav-item{
+        background-color: $info-10;
+        margin-bottom: 0;
+    }
+    
+    .chevron-down{
+        transform: rotate(180deg);
+    }
+    
+    .sub-nav{
+        height: 520px;
+        visibility: visible;
+        pointer-events: auto;
+        opacity: 100%;
+
+        &.tls{
+            height: 260px;
+        }
+    }
+}
+
+.sub-nav{
+    padding: 0 16px;
+    height: 0;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transition: $transition;
+}
+
+.sub-nav-item {
+    text-decoration: none;
+    background-color: $info-10;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+
+    &:hover{
+        .dot{
+            background-color: $gray-60;
+        } 
+    }
+
+    &.active{
+        .dot{
+            background-color: $info-70;
+        }
+        span{
+            color: $info-70;
+        }
+    }
+
+    &:last-child{
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    span{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .dot{
+        background-color: transparent;
+        border-radius: 50%;
+        height: 6px;
+        width: 6px;
+        margin: 6px 16px 6px 6px;
+        transition: $transition;
+    }
 }
