@@ -387,6 +387,7 @@ nav.topbar{
 
         &.delivery-page{
             display: none;
+            margin-top: 56px;
         }
     }
 
@@ -582,6 +583,10 @@ nav.topbar{
     padding: 16px 32px;
     height: 56px;
     transition: $transition;
+    position: absolute;
+    left: calc(256px + 32px);
+    width: calc(100vw - 256px);
+    top: 68px;
 
     .separator{
         margin: 0 12px;
