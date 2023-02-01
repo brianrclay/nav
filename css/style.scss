@@ -108,14 +108,9 @@ body {
                 cursor: e-resize;
             }
         }
-
-        .page{
-            width: calc(100vw - 68px - 64px);
-            overflow-y: auto;
-        }
         
         .page-wrapper{
-            width: calc(100vw - 68px - 64px);
+            width: 100vw;
         }
     }
 }
@@ -387,7 +382,6 @@ nav.topbar{
 
         &.delivery-page{
             display: none;
-            margin-top: 56px;
         }
     }
 
@@ -583,10 +577,6 @@ nav.topbar{
     padding: 16px 32px;
     height: 56px;
     transition: $transition;
-    position: absolute;
-    left: calc(256px + 32px);
-    width: calc(100vw - 256px);
-    top: 68px;
 
     .separator{
         margin: 0 12px;
