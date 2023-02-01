@@ -45,6 +45,11 @@ $('.search').click(function(){
     setTimeout(function() { $('#search-input').focus() }, 100);
 })
 
+$(document).keypress(function(){
+    $('.search-dropdown').toggleClass('show');
+    setTimeout(function() { $('#search-input').focus() }, 100);
+})
+
 $('.service-summary-trigger').click(function(){
     $('.summary-dropdown').toggleClass('show');
     $('.service-summary-trigger').toggleClass('show-menu');
