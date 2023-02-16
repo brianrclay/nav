@@ -168,3 +168,7 @@ tippy(
         delay: 50
     }
 )
+
+$('.close-wip').click(function(){
+    $('.wip').remove()
+})

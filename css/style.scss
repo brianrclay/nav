@@ -973,3 +973,24 @@ nav.topbar{
         transition: $transition;
     }
 }
+
+.wip{
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    button{
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        cursor: pointer;
+    }
+}
