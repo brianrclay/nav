@@ -993,4 +993,16 @@ nav.topbar{
         top: 40px;
         cursor: pointer;
     }
+
+    a{
+        color: $gray-0;
+        padding: 8px 16px;
+        border-radius: 4px;
+        background-color: $info-70;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        margin: 24px 0 0;
+    }
 }
